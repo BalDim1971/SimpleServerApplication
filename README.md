@@ -22,6 +22,28 @@
 
 ## Идеи для разработки.
 1. Серверное приложение, Backend.
-2. Предположительно Django или FastAPI?
-3. База данных PostgreSQL или sqlite3.
+2. Предположительно FastAPI.
+3. База данных PostgreSQL.
 4. Минимальная защита приложения?
+
+### Запуск на выполнение
+Разрабатывалось в Python 3.12
+Описание работ для PyCharm в Windows.
+
+1. Создать и активировать виртуальное окружение.
+python -m venv venv
+.\venv\Scripts\activate
+
+2. Установить зависимости проекта, указанные в файле requirements.txt
+pip install -r requirements.txt 
+или средствами PyCharm.
+
+3. Проверить наличие установленного PostgreSQL.
+4. Создать файл .env на основе sample.env и прописать настройки.
+
+5. Запустить сервер
+uvicorn main:app --reload 
+
+6. Работать с базой данных или просматривать документацию API можно:
+localhost:8000/docs или
+localhost:8000/redoc
