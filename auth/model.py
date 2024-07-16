@@ -1,10 +1,11 @@
+from sqlalchemy import Column, String
 from pydantic import BaseModel
 
 
 class Token(BaseModel):
-    access_token: str
-    token_type: str
+    access_token = Column(String)
+    token_type = Column(String)
 
 
 class TokenData(BaseModel):
-    username: str | None = None
+    username = Column(String, default=None)
