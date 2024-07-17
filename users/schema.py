@@ -14,4 +14,4 @@ class User(UserBase):
     is_active: bool
 
     class Config:
-        orm_mode: bool = True
+        from_attributes: bool = True
